@@ -3,9 +3,6 @@ from kivy.app import App
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.button import Button
 from kivy.properties import ListProperty
-  
-XGRIDSIZE = 10
-YGRIDSIZE = 15 
 
 # Classe principale qui herite de kivy.app
 class JrcApp(App):
@@ -15,9 +12,6 @@ class JrcApp(App):
 # Classe du board qui herite de kivy.uix.gridlayout
 class Board(GridLayout):
     def __init__(self, *args, **kwargs):
-        # Added here because .kv file not loaded
-        self.cols = XGRIDSIZE
-        self.rows = YGRIDSIZE
         
         super(Board, self).__init__(*args, **kwargs)
         for row in range(self.cols):
